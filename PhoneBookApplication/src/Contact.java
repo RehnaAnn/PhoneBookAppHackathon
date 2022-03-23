@@ -1,14 +1,15 @@
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public abstract class Contact {
 
 	protected String name;
 	protected String phoneNumber;
-	protected LocalTime createdAt;
+	protected LocalDateTime createdAt;
 	
 	
 	
-	public Contact(String name, String phoneNumber, LocalTime createdAt) {
+	public Contact(String name, String phoneNumber, LocalDateTime createdAt) {
 		super();
 		this.name = name;
 		this.phoneNumber = phoneNumber;
@@ -41,13 +42,13 @@ public abstract class Contact {
 
 
 
-	public LocalTime getCreatedAt() {
+	public LocalDateTime getCreatedAt() {
 		return createdAt;
 	}
 
 
 
-	public void setCreatedAt(LocalTime createdAt) {
+	public void setCreatedAt(LocalDateTime createdAt) {
 		this.createdAt = createdAt;
 	}
 
