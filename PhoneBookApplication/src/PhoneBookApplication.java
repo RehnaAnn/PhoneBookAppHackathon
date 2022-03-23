@@ -80,15 +80,18 @@ public class PhoneBookApplication {
 	public void search() {
 		//Ask user for search query. Enter name or part. Look at phonebook and display information for user. 
 			System.out.println("Please enter a search query");
-			String name=reader.nextLine();
+			String query = reader.nextLine();
 			//Search through each contact
 			for(Contact contact: phonebook) {	
-				if (contact.getName().equals(name)) {
+				
+				if (contact.getName().contains(query)) {
+					
 					System.out.println(contact);
+					
 				}
-				//This is a patch not a resolution. ^
 				
 			}
+			
 		}
 	
 	
