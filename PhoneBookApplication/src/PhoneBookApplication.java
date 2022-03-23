@@ -42,18 +42,21 @@ public class PhoneBookApplication {
 		System.out.println("Enter contact ID:");
 		int response = reader.nextInt();
 		
+		boolean foundId = false;
+		
 		for(Contact contact : phonebook) {
 			
 			if(contact.getId() == response) {
 				
 				System.out.println(contact);
-				
-			} else {
-				
-				System.out.println("No contact has that ID.");
+				foundId = true;
 				
 			}
 			
+		}
+		
+		if(!foundId) {
+			System.out.println("ID not found.");
 		}
 		
 	}
@@ -79,10 +82,10 @@ public class PhoneBookApplication {
 	
 	public void search() {
 		//Ask user for search query. Enter name or part. Look at phonebook and display information for user. 
-			System.out.println("Please enter a search query");
+			System.out.println("Please enter a search query:");
 			String query = reader.nextLine();
 			//Search through each contact
-			for(Contact contact: phonebook) {	
+			for(Contact contact : phonebook) {	
 				
 				if (contact.getName().contains(query)) {
 					

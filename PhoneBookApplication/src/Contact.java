@@ -6,14 +6,15 @@ public abstract class Contact {
 	protected String name;
 	protected String phoneNumber;
 	protected LocalDateTime createdAt;
-	protected int id = 1;
+	static int idTracker = 0;
+	protected int id;
 
 	public Contact(String name, String phoneNumber, LocalDateTime createdAt) {
 		super();
 		this.name = name;
 		this.phoneNumber = phoneNumber;
 		this.createdAt = createdAt;
-		this.id = this.id + 1;
+		this.id = idTracker++;
 	}
 
 	public String getName() {
@@ -50,7 +51,7 @@ public abstract class Contact {
 
 			int numberVersion = Integer.valueOf(this.phoneNumber);
 
-			return this.phoneNumber.length() == 12;
+			return this.phoneNumber.length() == 10;
 		}
 
 		catch (Exception e) {
