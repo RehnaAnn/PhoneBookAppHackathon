@@ -7,9 +7,7 @@ public abstract class Contact {
 	protected String phoneNumber;
 	protected LocalDateTime createdAt;
 	protected int id = 1;
-	
-	
-	
+
 	public Contact(String name, String phoneNumber, LocalDateTime createdAt) {
 		super();
 		this.name = name;
@@ -18,37 +16,25 @@ public abstract class Contact {
 		this.id = this.id + 1;
 	}
 
-
-
 	public String getName() {
 		return name;
 	}
-
-
 
 	public void setName(String name) {
 		this.name = name;
 	}
 
-
-
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-
-
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
-
-
 	public LocalDateTime getCreatedAt() {
 		return createdAt;
 	}
-
-
 
 	public void setCreatedAt(LocalDateTime createdAt) {
 		this.createdAt = createdAt;
@@ -59,19 +45,25 @@ public abstract class Contact {
 	}
 
 	boolean validPhoneNumber() {
-		
+
 		try {
-			
+
 			int numberVersion = Integer.valueOf(this.phoneNumber);
-			
+
 			return this.phoneNumber.length() == 12;
 		}
-		
-		catch(Exception e) {
-			
+
+		catch (Exception e) {
+
 			return false;
-			
+
 		}
+
 	}
-	
+
+	@Override
+	public String toString() {
+		return "[name=" + name + ", id=" + id + "]";
+	}
+
 }
