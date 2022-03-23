@@ -6,6 +6,7 @@ public abstract class Contact {
 	protected String name;
 	protected String phoneNumber;
 	protected LocalDateTime createdAt;
+	protected int id = 1;
 	
 	
 	
@@ -14,6 +15,7 @@ public abstract class Contact {
 		this.name = name;
 		this.phoneNumber = phoneNumber;
 		this.createdAt = createdAt;
+		this.id = this.id + 1;
 	}
 
 
@@ -52,7 +54,9 @@ public abstract class Contact {
 		this.createdAt = createdAt;
 	}
 
-
+	public int getId() {
+		return this.id;
+	}
 
 	boolean validPhoneNumber() {
 		
