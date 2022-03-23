@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PhoneBookApplication {
+	Scanner reader=new Scanner(System.in);
 
 	ArrayList<Contact> phonebook;
 	
@@ -35,7 +36,6 @@ public class PhoneBookApplication {
 	}
 	
 	public void info() {
-		Scanner reader = new Scanner(System.in);
 		
 		this.list();
 		
@@ -60,8 +60,6 @@ public class PhoneBookApplication {
 	
 	public void delete() {
 		
-		Scanner reader = new Scanner(System.in);
-		
 		this.list();
 		
 		System.out.println("Enter contact ID:");
@@ -79,5 +77,11 @@ public class PhoneBookApplication {
 		
 	}
 	
-	
+	public void search() {
+		//Ask user for search query. Enter name or part. Look at phonebook and display information for user. 
+			
+		
+		
+		
+	}
 }
