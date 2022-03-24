@@ -6,7 +6,7 @@ public abstract class Contact {
 	protected String name;
 	protected String phoneNumber;
 	protected LocalDateTime createdAt;
-	static int idTracker = 0;
+	static int idTracker = 1;
 	protected int id;
 
 	public Contact(String name, String phoneNumber, LocalDateTime createdAt) {
