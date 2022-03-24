@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
-public abstract class Contact {
+public abstract class Contact  {
 
 	protected String name;
 	protected String phoneNumber;

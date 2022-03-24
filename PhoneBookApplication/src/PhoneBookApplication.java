@@ -1,8 +1,9 @@
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class PhoneBookApplication {
+public class PhoneBookApplication implements Serializable {
 	Scanner reader=new Scanner(System.in);
 
 	ArrayList<Contact> phonebook;

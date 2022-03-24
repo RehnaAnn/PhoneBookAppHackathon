@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
-public class Person extends Contact {
+public class Person extends Contact implements Serializable {
 
 	
 	protected String email;

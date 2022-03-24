@@ -1,9 +1,16 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.NotSerializableException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException,NotSerializableException {
 
 		PhoneBookApplication phonebook = new PhoneBookApplication();
 		Scanner reader = new Scanner(System.in);
@@ -60,6 +67,14 @@ public class Main {
 
 		} while (response != 7);
 
+		File file=new File("C:\\Users\\BijayaWagle\\OneDrive - Xpanxion\\"
+				+ "Desktop\\java training\\Write\\phonebook.txt");
+		FileOutputStream fos=new FileOutputStream(file);
+		ObjectOutputStream oos=new ObjectOutputStream(fos);
+		oos.writeObject(phonebook);
+		fos.close();
+		oos.close();
+		
 	}
 
 	public static boolean validPhoneNumber(String phoneNumber) {
@@ -119,6 +134,8 @@ public class Main {
 		String website = reader.nextLine();
 
 		phonebook.add(new Organization(name, phoneNumber, birthday, website));
+		
+		
 
 	}
 

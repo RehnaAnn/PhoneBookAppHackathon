@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
-public class Organization extends Contact {
+public class Organization extends Contact implements Serializable {
 	protected String website;
 
 	public Organization(String name, String phoneNumber, LocalDateTime createdAt, String website) {
