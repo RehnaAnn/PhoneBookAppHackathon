@@ -45,23 +45,6 @@ public abstract class Contact {
 		return this.id;
 	}
 
-	boolean validPhoneNumber() {
-
-		try {
-
-			int numberVersion = Integer.valueOf(this.phoneNumber);
-
-			return this.phoneNumber.length() == 10;
-		}
-
-		catch (Exception e) {
-
-			return false;
-
-		}
-
-	}
-
 	@Override
 	public String toString() {
 		return "[name=" + name + ", id=" + id + "]";
