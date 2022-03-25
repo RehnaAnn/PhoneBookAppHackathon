@@ -12,6 +12,9 @@ public class Person extends Contact implements Serializable {
 		// TODO Auto-generated constructor stub
 		this.email = email;
 	}
+	public Person() {
+		
+	}
 
 	public String getEmail() {
 		return email;

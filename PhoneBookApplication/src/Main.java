@@ -62,19 +62,14 @@ public class Main {
 			case 7:
 				break;
 			default:
-				System.out.println("\nDid you listen fuckboi? That wasn't an option.\n");
+				System.out.println("\n Invalid entry. Please try again.\n");
 			}
 
 		} while (response != 7);
-
-		File file=new File("C:\\Users\\BijayaWagle\\OneDrive - Xpanxion\\"
-				+ "Desktop\\java training\\Write\\phonebook.txt");
-		FileOutputStream fos=new FileOutputStream(file);
-		ObjectOutputStream oos=new ObjectOutputStream(fos);
-		oos.writeObject(phonebook);
-		fos.close();
-		oos.close();
 		
+		String fileName = "C:\\Users\\Public\\phonebook.txt";
+		phonebook.SaveContactsToFile(fileName);
+		phonebook.LoadContactsFromFile(fileName);
 	}
 
 	public static boolean validPhoneNumber(String phoneNumber) {

@@ -9,6 +9,9 @@ public class Organization extends Contact implements Serializable {
 		super(name, phoneNumber, createdAt);
 		this.website = website;
 	}
+	public Organization() {
+		
+	}
 
 	public String getWebsite() {
 		return website;

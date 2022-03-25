@@ -11,11 +11,13 @@ public abstract class Contact  {
 	protected int id;
 
 	public Contact(String name, String phoneNumber, LocalDateTime createdAt) {
-		super();
 		this.name = name;
 		this.phoneNumber = phoneNumber;
 		this.createdAt = createdAt;
 		this.id = idTracker++;
+	}
+	public Contact() {
+		
 	}
 
 	public String getName() {
