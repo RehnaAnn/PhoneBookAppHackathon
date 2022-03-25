@@ -6,6 +6,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		PhoneBookApplication phonebook = new PhoneBookApplication();
+		@SuppressWarnings("resource")
 		Scanner reader = new Scanner(System.in);
 		int response;
 
